@@ -83,7 +83,7 @@ function Get-NameFromDNS
 
     $Null = $(
         $NSlookupResult = nslookup.exe $Target $Server
-        if("$($NSlookupResult)" -match 'Name:\s+([\w\.]+)')
+        if("$($NSlookupResult)" -match 'Name:\s+([^\s]+)')
         {
             $ComputerName = $Matches[1]
         }
@@ -99,26 +99,3 @@ function Get-NameFromDNS
     Return $ComputerName
 }
 Export-ModuleMember -Function * -Verbose:$false
-# SIG # Begin signature block
-# MIID1QYJKoZIhvcNAQcCoIIDxjCCA8ICAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
-# gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUpJHUVCHhhRxnWHSBYTKOJh0n
-# zC6gggH3MIIB8zCCAVygAwIBAgIQEdV66iePd65C1wmJ28XdGTANBgkqhkiG9w0B
-# AQUFADAUMRIwEAYDVQQDDAlTQ09yY2hEZXYwHhcNMTUwMzA5MTQxOTIxWhcNMTkw
-# MzA5MDAwMDAwWjAUMRIwEAYDVQQDDAlTQ09yY2hEZXYwgZ8wDQYJKoZIhvcNAQEB
-# BQADgY0AMIGJAoGBANbZ1OGvnyPKFcCw7nDfRgAxgMXt4YPxpX/3rNVR9++v9rAi
-# pY8Btj4pW9uavnDgHdBckD6HBmFCLA90TefpKYWarmlwHHMZsNKiCqiNvazhBm6T
-# XyB9oyPVXLDSdid4Bcp9Z6fZIjqyHpDV2vas11hMdURzyMJZj+ibqBWc3dAZAgMB
-# AAGjRjBEMBMGA1UdJQQMMAoGCCsGAQUFBwMDMB0GA1UdDgQWBBQ75WLz6WgzJ8GD
-# ty2pMj8+MRAFTTAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQEFBQADgYEAoK7K
-# SmNLQ++VkzdvS8Vp5JcpUi0GsfEX2AGWZ/NTxnMpyYmwEkzxAveH1jVHgk7zqglS
-# OfwX2eiu0gvxz3mz9Vh55XuVJbODMfxYXuwjMjBV89jL0vE/YgbRAcU05HaWQu2z
-# nkvaq1yD5SJIRBooP7KkC/zCfCWRTnXKWVTw7hwxggFIMIIBRAIBATAoMBQxEjAQ
-# BgNVBAMMCVNDT3JjaERldgIQEdV66iePd65C1wmJ28XdGTAJBgUrDgMCGgUAoHgw
-# GAYKKwYBBAGCNwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGC
-# NwIBBDAcBgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQx
-# FgQUFeGs8EFux5oo7gplldhBHh+HuFQwDQYJKoZIhvcNAQEBBQAEgYCQPeUZ7wWw
-# O/d2n6v23etEaY28LlQ6LMcnIxUs4akX3U5ZBtRhx7FEDMw2+3q73kk/zA2Svz5e
-# 8GzYln1k6eggpthhmrgtrAJ7uw263nZZeW7p2dym3rrHb5b6Jk+F4NO9fhG4grBd
-# J36wARliNmfyOVZrqye83O+6WevnjrdSig==
-# SIG # End signature block
