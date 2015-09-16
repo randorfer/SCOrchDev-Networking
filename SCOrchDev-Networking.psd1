@@ -27,7 +27,7 @@ CompanyName = 'SCOrchDev'
 Copyright = '(c) SCOrchDev. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'Used for wrapping common networking commands'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '2.0'
