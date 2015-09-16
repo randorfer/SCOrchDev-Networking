@@ -1,4 +1,5 @@
-﻿<# 
+﻿#requires -Version 2 -Modules SCOrchDev-Exception
+<# 
 .Synopsis
     Uses NSLookup to convert a Target's IP Address
 
@@ -26,7 +27,7 @@ function Get-IPAddressFromDNS
 
         [Parameter(Mandatory=$False)]
         [String]
-        $Server
+        $Server = $env:COMPUTERNAME
     )
 
     $Null = $(
@@ -78,7 +79,7 @@ function Get-NameFromDNS
 
         [Parameter(Mandatory=$False)]
         [String]
-        $Server
+        $Server = $env:COMPUTERNAME
     )
 
     $Null = $(

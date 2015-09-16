@@ -12,7 +12,7 @@
 RootModule = '.\SCOrchDev-Networking.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.0'
+ModuleVersion = '1.0.1'
 
 # ID used to uniquely identify this module
 GUID = '9c721b17-09be-49ae-8259-444d140668a1'
@@ -48,7 +48,7 @@ PowerShellVersion = '2.0'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-# RequiredModules = @()
+RequiredModules = @('SCOrchDev-Exception')
 
 # Assemblies that must be loaded prior to importing this module
 # RequiredAssemblies = @()
@@ -81,7 +81,7 @@ AliasesToExport = '*'
 ModuleList = @('SCOrchDev-Networking')
 
 # List of all files packaged with this module
-FileList = @('SCOrchDev-Networking.psd1','SCOrchDev-Networking.psm1')
+FileList = @('SCOrchDev-Networking.psd1','SCOrchDev-Networking.psm1', 'LICENSE', 'README.md', 'SCOrchDev-Networking.tests.ps1')
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess
 # PrivateData = ''
