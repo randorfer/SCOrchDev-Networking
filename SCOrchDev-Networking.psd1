@@ -12,7 +12,7 @@
 RootModule = '.\SCOrchDev-Networking.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.1'
+ModuleVersion = '1.0.2'
 
 # ID used to uniquely identify this module
 GUID = '9c721b17-09be-49ae-8259-444d140668a1'
